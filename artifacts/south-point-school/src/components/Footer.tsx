@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Youtube, Instagram } from "luci
 
 export default function Footer() {
   return (
-    <footer className="bg-[#060d1f] text-gray-300">
+    <footer className="bg-[#0c0a06] text-gray-300">
       {/* Gold divider */}
       <div className="section-divider" />
 

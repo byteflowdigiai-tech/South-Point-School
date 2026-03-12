@@ -48,7 +48,7 @@ export default function Admissions() {
       <NewsTicker />
 
       {/* Hero */}
-      <section className="bg-[#7d2a1e] py-20 relative overflow-hidden">
+      <section className="bg-[#6b4a10] py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: `repeating-linear-gradient(45deg, #c9a227 0px, #c9a227 1px, transparent 1px, transparent 30px)`,
         }} />
@@ -73,8 +73,8 @@ export default function Admissions() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <div className="text-xs font-bold tracking-widest uppercase text-[#7d2a1e] mb-3">How to Apply</div>
-            <h2 className="text-4xl font-bold text-[#0f1e3d] mb-4">Admission Process</h2>
+            <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">How to Apply</div>
+            <h2 className="text-4xl font-bold text-[#1a1510] mb-4">Admission Process</h2>
             <div className="section-divider w-24 mx-auto" />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -89,10 +89,10 @@ export default function Admissions() {
               >
                 <div className="text-5xl font-black text-gray-100 absolute top-4 right-4 leading-none">{step.no}</div>
                 <div className="relative z-10">
-                  <div className="w-10 h-10 rounded-full bg-[#0f1e3d] flex items-center justify-center text-gold font-bold text-sm mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#1a1510] flex items-center justify-center text-gold font-bold text-sm mb-4">
                     {step.no}
                   </div>
-                  <h3 className="font-bold text-[#0f1e3d] text-lg mb-2">{step.title}</h3>
+                  <h3 className="font-bold text-[#1a1510] text-lg mb-2">{step.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </motion.div>
@@ -107,8 +107,8 @@ export default function Admissions() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Docs */}
             <div>
-              <div className="text-xs font-bold tracking-widest uppercase text-[#7d2a1e] mb-3">Required</div>
-              <h2 className="text-3xl font-bold text-[#0f1e3d] mb-6">Documents Required</h2>
+              <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">Required</div>
+              <h2 className="text-3xl font-bold text-[#1a1510] mb-6">Documents Required</h2>
               <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
                 <ul className="space-y-3">
                   {docs.map((doc, i) => (
@@ -118,7 +118,7 @@ export default function Admissions() {
                     </li>
                   ))}
                 </ul>
-                <button className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#0f1e3d] border-2 border-[#0f1e3d] px-5 py-2 rounded hover:bg-[#0f1e3d] hover:text-white transition">
+                <button className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#1a1510] border-2 border-[#1a1510] px-5 py-2 rounded hover:bg-[#1a1510] hover:text-white transition">
                   <Download size={16} />
                   Download Checklist
                 </button>
@@ -127,12 +127,12 @@ export default function Admissions() {
 
             {/* Fee Structure */}
             <div>
-              <div className="text-xs font-bold tracking-widest uppercase text-[#7d2a1e] mb-3">Financials</div>
-              <h2 className="text-3xl font-bold text-[#0f1e3d] mb-6">Fee Structure 2025–26</h2>
+              <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">Financials</div>
+              <h2 className="text-3xl font-bold text-[#1a1510] mb-6">Fee Structure 2025–26</h2>
               <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="bg-[#0f1e3d] text-white">
+                    <tr className="bg-[#1a1510] text-white">
                       <th className="px-4 py-3 text-left font-semibold">Class</th>
                       <th className="px-4 py-3 text-right font-semibold">Annual</th>
                       <th className="px-4 py-3 text-right font-semibold">Quarterly</th>
@@ -142,7 +142,7 @@ export default function Admissions() {
                     {fees.map((fee, i) => (
                       <tr key={i} className={`${i % 2 === 0 ? "bg-white" : "bg-gray-50"} border-b border-gray-100 last:border-0`}>
                         <td className="px-4 py-3 text-gray-700">{fee.grade}</td>
-                        <td className="px-4 py-3 text-right font-semibold text-[#0f1e3d]">{fee.annual}</td>
+                        <td className="px-4 py-3 text-right font-semibold text-[#1a1510]">{fee.annual}</td>
                         <td className="px-4 py-3 text-right text-gray-500">{fee.quarterly}</td>
                       </tr>
                     ))}
@@ -158,7 +158,7 @@ export default function Admissions() {
       </section>
 
       {/* Enquiry Form */}
-      <section className="py-20 bg-[#0f1e3d]">
+      <section className="py-20 bg-[#1a1510]">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-10">
             <div className="text-xs font-bold tracking-widest uppercase text-gold/70 mb-3">Get In Touch</div>
@@ -221,7 +221,7 @@ export default function Admissions() {
                   placeholder="Any specific queries or information you'd like to share..." />
               </div>
               <button type="submit"
-                className="w-full py-3.5 rounded-lg font-bold gold-gradient text-[#0f1e3d] hover:opacity-90 transition flex items-center justify-center gap-2">
+                className="w-full py-3.5 rounded-lg font-bold gold-gradient text-[#1a1510] hover:opacity-90 transition flex items-center justify-center gap-2">
                 Submit Enquiry <ArrowRight size={18} />
               </button>
             </form>

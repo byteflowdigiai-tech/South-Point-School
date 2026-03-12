@@ -19,7 +19,7 @@ export default function About() {
       <NewsTicker />
 
       {/* Page Hero */}
-      <section className="bg-[#0f1e3d] py-20 relative overflow-hidden">
+      <section className="bg-[#1a1510] py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: `repeating-linear-gradient(45deg, #c9a227 0px, #c9a227 1px, transparent 1px, transparent 30px)`,
         }} />
@@ -39,8 +39,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <div className="text-xs font-bold tracking-widest uppercase text-[#7d2a1e] mb-3">Our Legacy</div>
-              <h2 className="text-4xl font-bold text-[#0f1e3d] mb-6">History & Heritage</h2>
+              <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">Our Legacy</div>
+              <h2 className="text-4xl font-bold text-[#1a1510] mb-6">History & Heritage</h2>
               <div className="section-divider w-24 mb-6" />
               <p className="text-gray-600 leading-relaxed mb-4 text-lg">
                 South Point School was established in <strong>1960</strong> by visionary educators who believed that every child in Assam deserved access to world-class education. Starting with a modest batch of students, the school grew steadily over the decades.
@@ -82,8 +82,8 @@ export default function About() {
       <section id="mission" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <div className="text-xs font-bold tracking-widest uppercase text-[#7d2a1e] mb-3">Our Purpose</div>
-            <h2 className="text-4xl font-bold text-[#0f1e3d] mb-4">Vision, Mission & Values</h2>
+            <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">Our Purpose</div>
+            <h2 className="text-4xl font-bold text-[#1a1510] mb-4">Vision, Mission & Values</h2>
             <div className="section-divider w-24 mx-auto" />
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -91,21 +91,21 @@ export default function About() {
               {
                 icon: "🔭",
                 title: "Our Vision",
-                color: "bg-[#0f1e3d]",
+                color: "bg-[#1a1510]",
                 textColor: "text-gold",
                 content: "To be a nationally recognized centre of learning that develops globally competent, ethically grounded, and socially responsible individuals who contribute meaningfully to society.",
               },
               {
                 icon: "🎯",
                 title: "Our Mission",
-                color: "bg-[#7d2a1e]",
+                color: "bg-[#6b4a10]",
                 textColor: "text-yellow-300",
                 content: "To provide high-quality, inclusive education in a nurturing environment that stimulates intellectual curiosity, fosters creativity, and builds character through academic and co-curricular excellence.",
               },
               {
                 icon: "⭐",
                 title: "Our Values",
-                color: "bg-[#1a3a6b]",
+                color: "bg-[#4a3008]",
                 textColor: "text-gold",
                 content: "Integrity, Excellence, Respect, Innovation, Empathy — these core values guide every decision, interaction, and achievement at South Point School.",
               },
@@ -130,19 +130,19 @@ export default function About() {
       <section id="principal" className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
-            <div className="text-xs font-bold tracking-widest uppercase text-[#7d2a1e] mb-3">From the Desk</div>
-            <h2 className="text-4xl font-bold text-[#0f1e3d]">Principal's Message</h2>
+            <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">From the Desk</div>
+            <h2 className="text-4xl font-bold text-[#1a1510]">Principal's Message</h2>
             <div className="section-divider w-24 mx-auto mt-4" />
           </div>
-          <div className="bg-amber-50 rounded-3xl p-10 border border-amber-100 relative">
+          <div className="bg-[#faf5e8] rounded-3xl p-10 border border-amber-100 relative">
             <div className="text-6xl text-gold absolute top-6 left-8 opacity-30 font-serif leading-none">"</div>
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="shrink-0">
-                <div className="w-28 h-28 rounded-full bg-[#0f1e3d] flex items-center justify-center text-gold text-4xl font-bold shadow-lg">
+                <div className="w-28 h-28 rounded-full bg-[#1a1510] flex items-center justify-center text-gold text-4xl font-bold shadow-lg">
                   R
                 </div>
                 <div className="text-center mt-3">
-                  <div className="font-bold text-[#0f1e3d]">Dr. Ramesh Baruah</div>
+                  <div className="font-bold text-[#1a1510]">Dr. Ramesh Baruah</div>
                   <div className="text-gray-500 text-sm">Principal</div>
                   <div className="text-gray-400 text-xs">M.Ed., Ph.D.</div>
                 </div>
@@ -167,8 +167,8 @@ export default function About() {
       <section id="faculty" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <div className="text-xs font-bold tracking-widest uppercase text-[#7d2a1e] mb-3">Our Team</div>
-            <h2 className="text-4xl font-bold text-[#0f1e3d] mb-4">Distinguished Faculty</h2>
+            <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">Our Team</div>
+            <h2 className="text-4xl font-bold text-[#1a1510] mb-4">Distinguished Faculty</h2>
             <div className="section-divider w-24 mx-auto" />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -181,12 +181,12 @@ export default function About() {
                 transition={{ delay: i * 0.08 }}
                 className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm card-hover flex items-center gap-4"
               >
-                <div className="w-16 h-16 rounded-full bg-[#0f1e3d] flex items-center justify-center text-gold text-2xl font-bold shrink-0">
+                <div className="w-16 h-16 rounded-full bg-[#1a1510] flex items-center justify-center text-gold text-2xl font-bold shrink-0">
                   {f.initial}
                 </div>
                 <div>
-                  <div className="font-bold text-[#0f1e3d]">{f.name}</div>
-                  <div className="text-[#7d2a1e] text-sm font-medium">{f.role}</div>
+                  <div className="font-bold text-[#1a1510]">{f.name}</div>
+                  <div className="text-[#6b4a10] text-sm font-medium">{f.role}</div>
                   <div className="text-gray-400 text-xs">{f.dept}</div>
                 </div>
               </motion.div>

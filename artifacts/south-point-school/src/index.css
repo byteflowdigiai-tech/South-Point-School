@@ -66,62 +66,75 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-:root {
-  --button-outline: rgba(0,0,0, .10);
-  --badge-outline: rgba(0,0,0, .05);
-  --opaque-button-border-intensity: -8;
-  --elevate-1: rgba(0,0,0, .03);
-  --elevate-2: rgba(0,0,0, .08);
+/* ============================================================
+   PALETTE: Warm Charcoal · Rich Gold · Amber-Brown
+   Inspired by the badge: dark shield + gold metallic text
+   All hues sit in the warm family (orange/gold/brown undertones)
+   ============================================================ */
 
-  /* Deep navy/dark with gold accent theme */
-  --background: 220 25% 97%;
-  --foreground: 220 30% 10%;
-  --border: 220 20% 88%;
-  --card: 0 0% 100%;
-  --card-foreground: 220 30% 10%;
-  --card-border: 220 20% 88%;
-  --sidebar: 220 35% 12%;
-  --sidebar-foreground: 45 60% 85%;
-  --sidebar-border: 220 30% 20%;
-  --sidebar-primary: 43 90% 50%;
-  --sidebar-primary-foreground: 220 35% 10%;
-  --sidebar-accent: 220 30% 20%;
-  --sidebar-accent-foreground: 45 60% 85%;
-  --sidebar-ring: 43 90% 50%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 220 30% 10%;
-  --popover-border: 220 20% 88%;
-  --primary: 43 90% 45%;
-  --primary-foreground: 220 35% 10%;
-  --secondary: 220 35% 15%;
-  --secondary-foreground: 45 60% 90%;
-  --muted: 220 20% 94%;
-  --muted-foreground: 220 15% 45%;
-  --accent: 10 70% 40%;
-  --accent-foreground: 0 0% 98%;
+:root {
+  --button-outline: rgba(0,0,0,.10);
+  --badge-outline: rgba(0,0,0,.05);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0,0,0,.03);
+  --elevate-2: rgba(0,0,0,.08);
+
+  --background: 38 30% 96%;       /* warm cream-white  */
+  --foreground: 30 25% 10%;       /* warm near-black   */
+  --border: 38 20% 86%;
+  --card: 38 40% 99%;
+  --card-foreground: 30 25% 10%;
+  --card-border: 38 20% 88%;
+
+  --sidebar: 30 30% 10%;
+  --sidebar-foreground: 43 65% 82%;
+  --sidebar-border: 30 25% 18%;
+  --sidebar-primary: 43 88% 50%;
+  --sidebar-primary-foreground: 30 30% 10%;
+  --sidebar-accent: 30 25% 18%;
+  --sidebar-accent-foreground: 43 65% 82%;
+  --sidebar-ring: 43 88% 50%;
+
+  --popover: 38 40% 99%;
+  --popover-foreground: 30 25% 10%;
+  --popover-border: 38 20% 88%;
+
+  --primary: 43 88% 45%;          /* rich gold         */
+  --primary-foreground: 30 30% 8%;
+
+  --secondary: 30 30% 12%;        /* warm dark charcoal */
+  --secondary-foreground: 43 65% 88%;
+
+  --muted: 38 25% 92%;
+  --muted-foreground: 30 15% 42%;
+
+  --accent: 33 70% 35%;           /* deep amber-brown — replaces reddish-brown */
+  --accent-foreground: 43 80% 92%;
+
   --destructive: 0 72% 51%;
   --destructive-foreground: 0 0% 98%;
-  --input: 220 20% 88%;
-  --ring: 43 90% 45%;
-  --chart-1: 43 90% 45%;
-  --chart-2: 220 35% 40%;
-  --chart-3: 10 70% 45%;
-  --chart-4: 150 50% 40%;
-  --chart-5: 280 50% 50%;
+  --input: 38 20% 86%;
+  --ring: 43 88% 45%;
+
+  --chart-1: 43 88% 45%;
+  --chart-2: 30 40% 30%;
+  --chart-3: 33 70% 35%;
+  --chart-4: 150 40% 35%;
+  --chart-5: 38 60% 55%;
 
   --app-font-sans: 'Inter', 'Segoe UI', sans-serif;
-  --app-font-serif: 'Georgia', serif;
-  --app-font-mono: 'Menlo', monospace;
+  --app-font-serif: Georgia, serif;
+  --app-font-mono: Menlo, monospace;
   --radius: 0.5rem;
 
-  --shadow-2xs: 0px 1px 2px 0px rgba(0,0,0,0.06);
-  --shadow-xs: 0px 2px 4px 0px rgba(0,0,0,0.08);
-  --shadow-sm: 0px 2px 8px 0px rgba(0,0,0,0.10);
-  --shadow: 0px 4px 16px 0px rgba(0,0,0,0.12);
-  --shadow-md: 0px 8px 24px 0px rgba(0,0,0,0.14);
-  --shadow-lg: 0px 16px 48px 0px rgba(0,0,0,0.16);
-  --shadow-xl: 0px 24px 64px 0px rgba(0,0,0,0.20);
-  --shadow-2xl: 0px 32px 80px 0px rgba(0,0,0,0.24);
+  --shadow-2xs: 0px 1px 2px 0px rgba(30,20,5,.07);
+  --shadow-xs:  0px 2px 4px 0px rgba(30,20,5,.09);
+  --shadow-sm:  0px 2px 8px 0px rgba(30,20,5,.11);
+  --shadow:     0px 4px 16px 0px rgba(30,20,5,.13);
+  --shadow-md:  0px 8px 24px 0px rgba(30,20,5,.15);
+  --shadow-lg:  0px 16px 48px 0px rgba(30,20,5,.18);
+  --shadow-xl:  0px 24px 64px 0px rgba(30,20,5,.22);
+  --shadow-2xl: 0px 32px 80px 0px rgba(30,20,5,.26);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 
@@ -142,90 +155,61 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply font-sans antialiased bg-background text-foreground;
-  }
+  * { @apply border-border; }
+  body { @apply font-sans antialiased bg-background text-foreground; }
 }
 
-/* Custom School Theme Utilities */
+/* ============================================================
+   UTILITY TOKENS
+   --dark    : #1a1510  warm near-black (replaces navy)
+   --mid     : #2e2410  warm dark brown (replaces navy variants)
+   --gold    : #c9a227  primary accent
+   --amber   : #6b4a10  deep amber-brown (replaces reddish-brown)
+   --cream   : #faf6ec  warm light section bg
+   ============================================================ */
 @layer utilities {
+
   .gold-gradient {
-    background: linear-gradient(135deg, #c9a227, #f0d060, #c9a227);
+    background: linear-gradient(135deg, #b8901e, #e8c547, #b8901e);
   }
 
-  .navy-gradient {
-    background: linear-gradient(135deg, #0f1e3d, #1a2f5a, #0f1e3d);
+  .dark-gradient {
+    background: linear-gradient(135deg, #0e0c08, #1a1510, #0e0c08);
   }
 
-  .hero-overlay {
-    background: linear-gradient(
-      to bottom,
-      rgba(10, 15, 40, 0.75) 0%,
-      rgba(10, 15, 40, 0.55) 50%,
-      rgba(10, 15, 40, 0.85) 100%
-    );
-  }
+  .text-gold     { color: #c9a227; }
+  .text-gold-light { color: #e8c547; }
 
-  .text-gold {
-    color: #c9a227;
-  }
+  /* dark charcoal — warms the whole palette */
+  .bg-dark       { background-color: #1a1510; }
+  .bg-dark-deep  { background-color: #0e0c08; }
 
-  .text-gold-light {
-    color: #f0d060;
-  }
+  /* amber-brown accent — replaces the old reddish-brown */
+  .bg-amber-dark { background-color: #6b4a10; }
 
-  .bg-navy {
-    background-color: #0f1e3d;
-  }
-
-  .bg-navy-dark {
-    background-color: #090e20;
-  }
-
-  .bg-reddish-brown {
-    background-color: #7d2a1e;
-  }
-
-  .border-gold {
-    border-color: #c9a227;
-  }
+  .border-gold   { border-color: #c9a227; }
 
   .section-divider {
     height: 4px;
-    background: linear-gradient(90deg, transparent, #c9a227, #f0d060, #c9a227, transparent);
+    background: linear-gradient(90deg, transparent, #c9a227, #e8c547, #c9a227, transparent);
   }
 
   .card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform .3s ease, box-shadow .3s ease;
   }
-
   .card-hover:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 40px rgba(30,20,5,.15);
   }
 
-  .news-ticker {
-    animation: ticker 30s linear infinite;
-  }
-
+  .news-ticker { animation: ticker 30s linear infinite; }
   @keyframes ticker {
-    0% { transform: translateX(100%); }
+    0%   { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
-  }
-
-  .animate-fade-up {
-    animation: fadeUp 0.6s ease forwards;
   }
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .count-up {
-    font-variant-numeric: tabular-nums;
+    to   { opacity: 1; transform: translateY(0); }
   }
 }

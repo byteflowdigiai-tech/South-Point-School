@@ -14,9 +14,9 @@ export default function NewsTicker() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="bg-[#7d2a1e] text-white py-2 overflow-hidden">
+    <div className="bg-[#6b4a10] text-white py-2 overflow-hidden">
       <div className="flex items-center">
-        <div className="bg-gold text-[#0f1e3d] text-xs font-bold px-4 py-1 whitespace-nowrap shrink-0 uppercase tracking-wider z-10">
+        <div className="bg-gold text-[#1a1510] text-xs font-bold px-4 py-1 whitespace-nowrap shrink-0 uppercase tracking-wider z-10">
           Latest News
         </div>
         <div className="overflow-hidden flex-1 relative">
