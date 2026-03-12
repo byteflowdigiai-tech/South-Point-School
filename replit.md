@@ -1,3 +1,31 @@
+# South Point School Website
+
+## Project Overview
+Premium, modern school website for South Point School, Guwahati (Est. 1960). Built with React + Vite in the pnpm monorepo. Features a deep navy, gold, and reddish-brown color scheme matching the school badge logo.
+
+## Artifacts
+- **south-point-school** (`artifacts/south-point-school/`): Main school website at `/` (previewPath: `/`)
+
+## Pages
+- **Home** — Hero slideshow, news ticker, stats counter, about snippet, academic programs, news & events, testimonials, CTA
+- **About** — History timeline, vision/mission/values, principal's message, faculty list
+- **Academics** — Tabbed curriculum levels (Primary → Senior Secondary), Senior Secondary streams (Science/Commerce/Arts), Co-curricular activities
+- **Admissions** — 6-step process, documents checklist, fee structure table, enquiry form
+- **News & Events** — Featured article, filterable news grid by category
+- **Contact** — Contact info, departments, message form, map placeholder
+
+## Components
+- `Navbar.tsx` — Sticky navbar with dropdown menus, top bar with contact info
+- `Footer.tsx` — 4-column footer with social links
+- `NewsTicker.tsx` — Animated scrolling news ticker (reddish-brown bar)
+- `StatCounter.tsx` — Animated count-up statistics on scroll
+
+## Color Theme
+- Deep navy: `#0f1e3d`
+- Gold: `#c9a227`, `#f0d060`
+- Reddish-brown: `#7d2a1e`
+- Background: light gray `hsl(220 25% 97%)`
+
 # Workspace
 
 ## Overview
