@@ -14,7 +14,7 @@ const heroSlides = [
     description:
       "South Point School, Guwahati — where academic rigour meets holistic development. Building character, inspiring curiosity, and nurturing potential.",
     bg: "linear-gradient(135deg, #060d1a 0%, #1a3060 50%, #080f20 100%)",
-    accent: "#c9a227",
+    accent: "#B8901A",
   },
   {
     title: "A Legacy of Achievement",
@@ -22,7 +22,7 @@ const heroSlides = [
     description:
       "With over 4,500 students and 200+ faculty, our institution is the cornerstone of quality education in Assam. CBSE affiliated, nationally recognised.",
     bg: "linear-gradient(135deg, #0a1530 0%, #1e3a7a 50%, #0a1530 100%)",
-    accent: "#e8c547",
+    accent: "#D4AF37",
   },
   {
     title: "Holistic Development",
@@ -30,7 +30,7 @@ const heroSlides = [
     description:
       "We believe in nurturing every dimension of a student's personality — from STEM excellence to performing arts, from athletics to social responsibility.",
     bg: "linear-gradient(135deg, #060d1a 0%, #0d1a3a 50%, #060d1a 100%)",
-    accent: "#c9a227",
+    accent: "#B8901A",
   },
 ];
 
@@ -126,7 +126,7 @@ export default function Home() {
         {/* Decorative pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
-            backgroundImage: `repeating-linear-gradient(45deg, #c9a227 0px, #c9a227 1px, transparent 1px, transparent 30px)`,
+            backgroundImage: `repeating-linear-gradient(45deg, #B8901A 0px, #B8901A 1px, transparent 1px, transparent 30px)`,
           }} />
         </div>
 
@@ -362,7 +362,7 @@ export default function Home() {
                     className="flex gap-4 items-start p-4 rounded-xl bg-gray-50 hover:bg-[#0d1b3e] transition group cursor-pointer border border-gray-100"
                   >
                     <div className="shrink-0 w-14 text-center">
-                      <div className="text-2xl font-bold text-[#c9a227] group-hover:text-gold leading-none">{event.date}</div>
+                      <div className="text-2xl font-bold text-[#B8901A] group-hover:text-gold leading-none">{event.date}</div>
                       <div className="text-xs text-gray-400 group-hover:text-gray-300 font-semibold uppercase">{event.month}</div>
                     </div>
                     <div>

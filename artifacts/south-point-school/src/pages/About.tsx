@@ -21,7 +21,7 @@ export default function About() {
       {/* Page Hero */}
       <section className="bg-[#0d1b3e] py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: `repeating-linear-gradient(45deg, #c9a227 0px, #c9a227 1px, transparent 1px, transparent 30px)`,
+          backgroundImage: `repeating-linear-gradient(45deg, #B8901A 0px, #B8901A 1px, transparent 1px, transparent 30px)`,
         }} />
         <div className="absolute left-0 top-0 bottom-0 w-1.5 gold-gradient" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
