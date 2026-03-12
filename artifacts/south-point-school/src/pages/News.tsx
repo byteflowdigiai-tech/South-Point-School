@@ -59,7 +59,7 @@ const allNews = [
 const categories = ["All", "Achievement", "Sports", "Event", "Admissions"];
 
 const catColors: Record<string, string> = {
-  Achievement: "bg-amber-100 text-amber-800",
+  Achievement: "bg-blue-100 text-blue-800",
   Sports: "bg-blue-100 text-blue-800",
   Event: "bg-purple-100 text-purple-800",
   Admissions: "bg-green-100 text-green-800",
@@ -77,7 +77,7 @@ export default function News() {
       <NewsTicker />
 
       {/* Hero */}
-      <section className="bg-[#1a1510] py-20 relative overflow-hidden">
+      <section className="bg-[#0d1b3e] py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: `repeating-linear-gradient(45deg, #c9a227 0px, #c9a227 1px, transparent 1px, transparent 30px)`,
         }} />
@@ -103,8 +103,8 @@ export default function News() {
               animate={{ opacity: 1, y: 0 }}
               className="mb-12 rounded-2xl overflow-hidden border border-gray-100 shadow-md grid md:grid-cols-2"
             >
-              <div className="bg-[#1a1510] p-10 flex flex-col justify-center">
-                <span className="inline-block bg-gold text-[#1a1510] text-xs font-bold px-3 py-1 rounded-full mb-4">Featured</span>
+              <div className="bg-[#0d1b3e] p-10 flex flex-col justify-center">
+                <span className="inline-block bg-gold text-[#0d1b3e] text-xs font-bold px-3 py-1 rounded-full mb-4">Featured</span>
                 <div className="flex items-center gap-2 text-gray-400 text-xs mb-3">
                   <Calendar size={12} />
                   <span>{featured.date}</span>
@@ -121,7 +121,7 @@ export default function News() {
               <div className="bg-gradient-to-br from-amber-400/20 to-gold/10 flex items-center justify-center min-h-48 md:min-h-auto">
                 <div className="text-center p-8">
                   <div className="text-8xl mb-4">🏆</div>
-                  <div className="text-[#1a1510] font-bold text-lg">Outstanding Achievement</div>
+                  <div className="text-[#0d1b3e] font-bold text-lg">Outstanding Achievement</div>
                   <div className="text-gray-500 text-sm">CBSE Board 2024</div>
                 </div>
               </div>
@@ -135,7 +135,7 @@ export default function News() {
                 key={cat}
                 onClick={() => setFilter(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
-                  filter === cat ? "bg-[#1a1510] text-gold" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  filter === cat ? "bg-[#0d1b3e] text-gold" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
                 {cat}
@@ -167,9 +167,9 @@ export default function News() {
                       <Calendar size={11} /> {item.date}
                     </span>
                   </div>
-                  <h3 className="font-bold text-[#1a1510] mb-2 leading-tight">{item.title}</h3>
+                  <h3 className="font-bold text-[#0d1b3e] mb-2 leading-tight">{item.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{item.excerpt}</p>
-                  <button className="mt-4 text-[#6b4a10] text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                  <button className="mt-4 text-[#1a3a80] text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
                     Read More <ArrowRight size={14} />
                   </button>
                 </div>

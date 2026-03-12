@@ -13,7 +13,7 @@ const heroSlides = [
     subtitle: "Shaping Tomorrow's Leaders Since 1960",
     description:
       "South Point School, Guwahati — where academic rigour meets holistic development. Building character, inspiring curiosity, and nurturing potential.",
-    bg: "linear-gradient(135deg, #100e0a 0%, #2e2410 50%, #14100a 100%)",
+    bg: "linear-gradient(135deg, #060d1a 0%, #1a3060 50%, #080f20 100%)",
     accent: "#c9a227",
   },
   {
@@ -21,7 +21,7 @@ const heroSlides = [
     subtitle: "6 Decades of Academic Excellence",
     description:
       "With over 4,500 students and 200+ faculty, our institution is the cornerstone of quality education in Assam. CBSE affiliated, nationally recognised.",
-    bg: "linear-gradient(135deg, #2e1e06 0%, #4a3010 50%, #2e1e06 100%)",
+    bg: "linear-gradient(135deg, #0a1530 0%, #1e3a7a 50%, #0a1530 100%)",
     accent: "#e8c547",
   },
   {
@@ -29,7 +29,7 @@ const heroSlides = [
     subtitle: "Academics · Sports · Arts · Leadership",
     description:
       "We believe in nurturing every dimension of a student's personality — from STEM excellence to performing arts, from athletics to social responsibility.",
-    bg: "linear-gradient(135deg, #1a1208 0%, #2e2010 50%, #1a1208 100%)",
+    bg: "linear-gradient(135deg, #060d1a 0%, #0d1a3a 50%, #060d1a 100%)",
     accent: "#c9a227",
   },
 ];
@@ -67,8 +67,8 @@ const programs = [
     title: "Primary School",
     grades: "Classes I – V",
     desc: "Building strong foundations through activity-based learning, creative exploration, and fundamental skills development.",
-    color: "from-amber-500/20 to-amber-600/10",
-    border: "border-amber-500/30",
+    color: "from-blue-600/15 to-blue-700/8",
+    border: "border-blue-500/25",
   },
   {
     icon: "📚",
@@ -158,7 +158,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/admissions"
-                  className="flex items-center gap-2 px-7 py-3.5 rounded font-semibold text-[#1a1510] gold-gradient hover:opacity-90 transition shadow-lg shadow-gold/20"
+                  className="flex items-center gap-2 px-7 py-3.5 rounded font-semibold text-[#0d1b3e] gold-gradient hover:opacity-90 transition shadow-lg shadow-gold/20"
                 >
                   Apply for Admission <ArrowRight size={18} />
                 </Link>
@@ -211,10 +211,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="inline-block text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">
+              <div className="inline-block text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">
                 About Our School
               </div>
-              <h2 className="text-4xl font-bold text-[#1a1510] mb-6 leading-tight">
+              <h2 className="text-4xl font-bold text-[#0d1b3e] mb-6 leading-tight">
                 A Premier Institution of<br />
                 <span className="text-gold">Learning & Character</span>
               </h2>
@@ -232,8 +232,8 @@ export default function Home() {
               <div className="grid grid-cols-3 gap-4 mb-8">
                 {[
                   { icon: <Award className="text-gold" size={22} />, label: "CBSE Affiliated" },
-                  { icon: <BookOpen className="text-[#6b4a10]" size={22} />, label: "NAAC Accredited" },
-                  { icon: <Users className="text-[#5c3d0e]" size={22} />, label: "ISO Certified" },
+                  { icon: <BookOpen className="text-[#1a3a80]" size={22} />, label: "NAAC Accredited" },
+                  { icon: <Users className="text-[#1e3a7a]" size={22} />, label: "ISO Certified" },
                 ].map((item) => (
                   <div key={item.label} className="flex flex-col items-center gap-2 p-3 rounded-lg bg-gray-50 border border-gray-100 text-center">
                     {item.icon}
@@ -243,7 +243,7 @@ export default function Home() {
               </div>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded bg-[#1a1510] text-white font-semibold hover:bg-[#2e2208] transition"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded bg-[#0d1b3e] text-white font-semibold hover:bg-[#1a2a5a] transition"
               >
                 Discover Our Story <ArrowRight size={18} />
               </Link>
@@ -251,10 +251,10 @@ export default function Home() {
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { bg: "bg-[#1a1510]", text: "text-gold", title: "Vision", desc: "To be the leading institution developing globally competent, ethically grounded citizens." },
-                { bg: "bg-[#6b4a10]", text: "text-yellow-300", title: "Mission", desc: "Providing quality education that fosters intellectual curiosity and moral integrity." },
-                { bg: "bg-[#faf5e8]0", text: "text-[#1a1510]", title: "Values", desc: "Integrity, Excellence, Empathy, Innovation — the pillars of our school culture." },
-                { bg: "bg-[#4a3008]", text: "text-gold-light", title: "Excellence", desc: "Consistently delivering outstanding academic and extracurricular achievements." },
+                { bg: "bg-[#0d1b3e]", text: "text-gold", title: "Vision", desc: "To be the leading institution developing globally competent, ethically grounded citizens." },
+                { bg: "bg-[#1a3a80]", text: "text-yellow-300", title: "Mission", desc: "Providing quality education that fosters intellectual curiosity and moral integrity." },
+                { bg: "bg-[#f0f4ff]0", text: "text-[#0d1b3e]", title: "Values", desc: "Integrity, Excellence, Empathy, Innovation — the pillars of our school culture." },
+                { bg: "bg-[#1a3060]", text: "text-gold-light", title: "Excellence", desc: "Consistently delivering outstanding academic and extracurricular achievements." },
               ].map((card) => (
                 <div key={card.title} className={`${card.bg} rounded-xl p-6 card-hover`}>
                   <div className={`text-xl font-bold ${card.text} mb-3`}>{card.title}</div>
@@ -270,8 +270,8 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">Programmes Offered</div>
-            <h2 className="text-4xl font-bold text-[#1a1510] mb-4">Academic Structure</h2>
+            <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">Programmes Offered</div>
+            <h2 className="text-4xl font-bold text-[#0d1b3e] mb-4">Academic Structure</h2>
             <div className="section-divider w-24 mx-auto mb-4" />
             <p className="text-gray-500 max-w-xl mx-auto">
               A structured, progressive curriculum designed to challenge, inspire, and prepare students at every stage of their educational journey.
@@ -288,10 +288,10 @@ export default function Home() {
                 className={`bg-gradient-to-br ${prog.color} border ${prog.border} rounded-2xl p-6 card-hover cursor-pointer`}
               >
                 <div className="text-4xl mb-4">{prog.icon}</div>
-                <div className="text-[#1a1510] font-bold text-xl mb-1">{prog.title}</div>
-                <div className="text-[#6b4a10] text-sm font-semibold mb-3">{prog.grades}</div>
+                <div className="text-[#0d1b3e] font-bold text-xl mb-1">{prog.title}</div>
+                <div className="text-[#1a3a80] text-sm font-semibold mb-3">{prog.grades}</div>
                 <p className="text-gray-600 text-sm leading-relaxed">{prog.desc}</p>
-                <Link href="/academics" className="inline-flex items-center gap-1 mt-4 text-xs font-semibold text-[#1a1510] hover:text-[#6b4a10] transition">
+                <Link href="/academics" className="inline-flex items-center gap-1 mt-4 text-xs font-semibold text-[#0d1b3e] hover:text-[#1a3a80] transition">
                   Learn more <ChevronRight size={14} />
                 </Link>
               </motion.div>
@@ -308,10 +308,10 @@ export default function Home() {
             <div className="lg:col-span-2">
               <div className="flex items-center justify-between mb-8">
                 <div>
-                  <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-1">Stay Informed</div>
-                  <h2 className="text-3xl font-bold text-[#1a1510]">Latest News</h2>
+                  <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-1">Stay Informed</div>
+                  <h2 className="text-3xl font-bold text-[#0d1b3e]">Latest News</h2>
                 </div>
-                <Link href="/news" className="text-sm font-semibold text-[#1a1510] hover:text-gold flex items-center gap-1 transition">
+                <Link href="/news" className="text-sm font-semibold text-[#0d1b3e] hover:text-gold flex items-center gap-1 transition">
                   View All <ArrowRight size={16} />
                 </Link>
               </div>
@@ -325,19 +325,19 @@ export default function Home() {
                     transition={{ delay: i * 0.08 }}
                     className="flex gap-4 p-4 rounded-xl border border-gray-100 hover:border-gold/40 hover:shadow-md transition cursor-pointer group"
                   >
-                    <div className="shrink-0 w-16 h-16 rounded-xl bg-[#1a1510] flex flex-col items-center justify-center text-gold">
+                    <div className="shrink-0 w-16 h-16 rounded-xl bg-[#0d1b3e] flex flex-col items-center justify-center text-gold">
                       <span className="text-xs font-medium">{item.date.split(" ")[0]}</span>
                       <span className="text-xs text-gray-400">{item.date.split(" ")[1]} {item.date.split(" ")[2]}</span>
                     </div>
                     <div>
                       <span className={`text-xs font-bold uppercase tracking-wider ${
-                        item.category === "Achievement" ? "text-amber-600" :
+                        item.category === "Achievement" ? "text-yellow-600" :
                         item.category === "Sports" ? "text-blue-600" :
                         item.category === "Event" ? "text-purple-600" : "text-green-600"
                       }`}>
                         {item.category}
                       </span>
-                      <h3 className="font-semibold text-[#1a1510] group-hover:text-[#6b4a10] transition mt-0.5">{item.title}</h3>
+                      <h3 className="font-semibold text-[#0d1b3e] group-hover:text-[#1a3a80] transition mt-0.5">{item.title}</h3>
                       <p className="text-gray-500 text-sm mt-1">{item.excerpt}</p>
                     </div>
                   </motion.div>
@@ -348,8 +348,8 @@ export default function Home() {
             {/* Events */}
             <div>
               <div className="mb-8">
-                <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-1">Schedule</div>
-                <h2 className="text-3xl font-bold text-[#1a1510]">Upcoming Events</h2>
+                <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-1">Schedule</div>
+                <h2 className="text-3xl font-bold text-[#0d1b3e]">Upcoming Events</h2>
               </div>
               <div className="space-y-4">
                 {events.map((event, i) => (
@@ -359,14 +359,14 @@ export default function Home() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex gap-4 items-start p-4 rounded-xl bg-gray-50 hover:bg-[#1a1510] transition group cursor-pointer border border-gray-100"
+                    className="flex gap-4 items-start p-4 rounded-xl bg-gray-50 hover:bg-[#0d1b3e] transition group cursor-pointer border border-gray-100"
                   >
                     <div className="shrink-0 w-14 text-center">
                       <div className="text-2xl font-bold text-[#c9a227] group-hover:text-gold leading-none">{event.date}</div>
                       <div className="text-xs text-gray-400 group-hover:text-gray-300 font-semibold uppercase">{event.month}</div>
                     </div>
                     <div>
-                      <div className="font-semibold text-[#1a1510] group-hover:text-white text-sm leading-snug">{event.title}</div>
+                      <div className="font-semibold text-[#0d1b3e] group-hover:text-white text-sm leading-snug">{event.title}</div>
                       <div className="text-gray-400 group-hover:text-gray-300 text-xs mt-1 flex items-center gap-1">
                         <Calendar size={11} /> {event.location}
                       </div>
@@ -376,13 +376,13 @@ export default function Home() {
               </div>
 
               {/* CTA Box */}
-              <div className="mt-6 rounded-xl dark-gradient p-6 text-center">
+              <div className="mt-6 rounded-xl navy-gradient p-6 text-center">
                 <div className="text-4xl mb-3">📋</div>
                 <h3 className="text-white font-bold text-lg mb-2">Admissions 2025–26</h3>
                 <p className="text-gray-300 text-sm mb-4">Applications are open. Limited seats available across all grades.</p>
                 <Link
                   href="/admissions"
-                  className="block px-5 py-2.5 rounded font-semibold gold-gradient text-[#1a1510] text-sm hover:opacity-90 transition"
+                  className="block px-5 py-2.5 rounded font-semibold gold-gradient text-[#0d1b3e] text-sm hover:opacity-90 transition"
                 >
                   Apply Now →
                 </Link>
@@ -393,7 +393,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-[#1a1510]">
+      <section className="py-20 bg-[#0d1b3e]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <div className="text-xs font-bold tracking-widest uppercase text-gold/70 mb-3">Why South Point</div>
@@ -427,11 +427,11 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-[#faf5e8]">
+      <section className="py-20 bg-[#f0f4ff]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">Voices</div>
-            <h2 className="text-4xl font-bold text-[#1a1510] mb-4">What Our Community Says</h2>
+            <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">Voices</div>
+            <h2 className="text-4xl font-bold text-[#0d1b3e] mb-4">What Our Community Says</h2>
             <div className="section-divider w-24 mx-auto" />
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -461,16 +461,16 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-sm border border-amber-100 card-hover"
+                className="bg-white rounded-2xl p-6 shadow-sm border border-blue-100 card-hover"
               >
                 <div className="text-3xl text-gold mb-4">"</div>
                 <p className="text-gray-600 leading-relaxed mb-6 italic">{t.quote}</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#1a1510] flex items-center justify-center text-gold font-bold">
+                  <div className="w-10 h-10 rounded-full bg-[#0d1b3e] flex items-center justify-center text-gold font-bold">
                     {t.initial}
                   </div>
                   <div>
-                    <div className="font-semibold text-[#1a1510] text-sm">{t.name}</div>
+                    <div className="font-semibold text-[#0d1b3e] text-sm">{t.name}</div>
                     <div className="text-gray-400 text-xs">{t.role}</div>
                   </div>
                 </div>
@@ -481,7 +481,7 @@ export default function Home() {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-16 bg-[#6b4a10]">
+      <section className="py-16 bg-[#1a3a80]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
             Begin Your <span className="text-gold-light">South Point Journey</span>
@@ -490,7 +490,7 @@ export default function Home() {
             Applications for the 2025–26 academic session are open. Take the first step toward an outstanding education.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/admissions" className="px-8 py-3.5 rounded font-bold gold-gradient text-[#1a1510] hover:opacity-90 transition shadow-lg">
+            <Link href="/admissions" className="px-8 py-3.5 rounded font-bold gold-gradient text-[#0d1b3e] hover:opacity-90 transition shadow-lg">
               Apply for Admission
             </Link>
             <Link href="/contact" className="px-8 py-3.5 rounded font-bold border-2 border-white/50 text-white hover:border-white transition">

@@ -50,7 +50,7 @@ export default function Navbar() {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-dark-deep text-gray-300 text-xs py-1.5 hidden md:block">
+      <div className="bg-[#060d1a] text-gray-300 text-xs py-1.5 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <span className="text-gold font-semibold tracking-wider uppercase text-xs">
             Pursuit of Excellence — Est. 1960, Guwahati
@@ -72,8 +72,8 @@ export default function Navbar() {
       <nav
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#1a1510]/98 backdrop-blur-md shadow-lg"
-            : "bg-[#1a1510]"
+            ? "bg-[#0d1b3e]/98 backdrop-blur-md shadow-lg"
+            : "bg-[#0d1b3e]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4">
@@ -137,7 +137,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/admissions"
-                className="ml-3 px-5 py-2 rounded text-sm font-semibold gold-gradient text-[#1a1510] hover:opacity-90 transition-opacity shadow-sm"
+                className="ml-3 px-5 py-2 rounded text-sm font-semibold gold-gradient text-[#0d1b3e] hover:opacity-90 transition-opacity shadow-sm"
               >
                 Apply Now
               </Link>
@@ -160,7 +160,7 @@ export default function Navbar() {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="lg:hidden bg-[#100e0a] border-t border-white/10 overflow-hidden"
+              className="lg:hidden bg-[#060d1a] border-t border-white/10 overflow-hidden"
             >
               <div className="px-4 py-4 flex flex-col gap-1">
                 {navLinks.map((link) => (
@@ -188,7 +188,7 @@ export default function Navbar() {
                 ))}
                 <Link
                   href="/admissions"
-                  className="mt-2 px-5 py-2.5 rounded text-sm font-semibold gold-gradient text-[#1a1510] text-center"
+                  className="mt-2 px-5 py-2.5 rounded text-sm font-semibold gold-gradient text-[#0d1b3e] text-center"
                 >
                   Apply Now
                 </Link>

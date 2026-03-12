@@ -20,7 +20,7 @@ export default function Contact() {
       <NewsTicker />
 
       {/* Hero */}
-      <section className="bg-[#1a1510] py-20 relative overflow-hidden">
+      <section className="bg-[#0d1b3e] py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: `repeating-linear-gradient(45deg, #c9a227 0px, #c9a227 1px, transparent 1px, transparent 30px)`,
         }} />
@@ -42,8 +42,8 @@ export default function Contact() {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div>
-              <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">Contact Details</div>
-              <h2 className="text-3xl font-bold text-[#1a1510] mb-8">Contact Information</h2>
+              <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">Contact Details</div>
+              <h2 className="text-3xl font-bold text-[#0d1b3e] mb-8">Contact Information</h2>
 
               <div className="space-y-6">
                 {[
@@ -69,11 +69,11 @@ export default function Contact() {
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-[#1a1510] flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-[#0d1b3e] flex items-center justify-center shrink-0">
                       {item.icon}
                     </div>
                     <div>
-                      <div className="font-semibold text-[#1a1510] text-sm mb-1">{item.title}</div>
+                      <div className="font-semibold text-[#0d1b3e] text-sm mb-1">{item.title}</div>
                       {item.lines.map((line, i) => (
                         <div key={i} className="text-gray-500 text-sm">{line}</div>
                       ))}
@@ -84,7 +84,7 @@ export default function Contact() {
 
               {/* Departments */}
               <div className="mt-10">
-                <div className="font-semibold text-[#1a1510] mb-4">Quick Contacts</div>
+                <div className="font-semibold text-[#0d1b3e] mb-4">Quick Contacts</div>
                 <div className="space-y-3">
                   {[
                     { dept: "Admissions", email: "admissions@southpointschool.edu.in" },
@@ -93,7 +93,7 @@ export default function Contact() {
                     { dept: "Alumni", email: "alumni@southpointschool.edu.in" },
                   ].map((d) => (
                     <div key={d.dept} className="p-3 rounded-lg bg-gray-50 border border-gray-100">
-                      <div className="text-xs font-bold text-[#6b4a10] uppercase tracking-wider">{d.dept}</div>
+                      <div className="text-xs font-bold text-[#1a3a80] uppercase tracking-wider">{d.dept}</div>
                       <div className="text-sm text-gray-600">{d.email}</div>
                     </div>
                   ))}
@@ -103,8 +103,8 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">Write to Us</div>
-              <h2 className="text-3xl font-bold text-[#1a1510] mb-8">Send a Message</h2>
+              <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">Write to Us</div>
+              <h2 className="text-3xl font-bold text-[#0d1b3e] mb-8">Send a Message</h2>
 
               {submitted ? (
                 <motion.div
@@ -113,7 +113,7 @@ export default function Contact() {
                   className="bg-green-50 border border-green-200 rounded-2xl p-12 text-center"
                 >
                   <div className="text-6xl mb-4">✉️</div>
-                  <h3 className="text-[#1a1510] text-2xl font-bold mb-2">Message Sent!</h3>
+                  <h3 className="text-[#0d1b3e] text-2xl font-bold mb-2">Message Sent!</h3>
                   <p className="text-gray-500">We'll get back to you within 1-2 business days. Thank you for reaching out to South Point School.</p>
                 </motion.div>
               ) : (
@@ -159,7 +159,7 @@ export default function Contact() {
                       placeholder="Write your message or query here..." />
                   </div>
                   <button type="submit"
-                    className="w-full py-3.5 rounded-lg font-bold bg-[#1a1510] text-gold hover:bg-[#2e2208] transition flex items-center justify-center gap-2">
+                    className="w-full py-3.5 rounded-lg font-bold bg-[#0d1b3e] text-gold hover:bg-[#1a2a5a] transition flex items-center justify-center gap-2">
                     Send Message <ArrowRight size={18} />
                   </button>
                 </form>
@@ -175,7 +175,7 @@ export default function Contact() {
                     href="https://maps.google.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-block text-sm font-semibold text-[#1a1510] hover:text-gold transition"
+                    className="mt-3 inline-block text-sm font-semibold text-[#0d1b3e] hover:text-gold transition"
                   >
                     View on Google Maps →
                   </a>

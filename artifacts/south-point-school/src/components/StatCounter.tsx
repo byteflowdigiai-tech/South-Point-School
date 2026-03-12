@@ -59,7 +59,7 @@ export default function StatCounter() {
   ];
 
   return (
-    <section className="bg-[#1a1510] py-14 border-y border-gold/20">
+    <section className="bg-[#0d1b3e] py-14 border-y border-gold/20">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           {stats.map((stat) => (

@@ -91,7 +91,7 @@ export default function Academics() {
       <NewsTicker />
 
       {/* Page Hero */}
-      <section className="bg-[#1a1510] py-20 relative overflow-hidden">
+      <section className="bg-[#0d1b3e] py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: `repeating-linear-gradient(45deg, #c9a227 0px, #c9a227 1px, transparent 1px, transparent 30px)`,
         }} />
@@ -112,8 +112,8 @@ export default function Academics() {
       <section id="primary" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
-            <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">Curriculum</div>
-            <h2 className="text-4xl font-bold text-[#1a1510] mb-4">Academic Structure</h2>
+            <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">Curriculum</div>
+            <h2 className="text-4xl font-bold text-[#0d1b3e] mb-4">Academic Structure</h2>
             <div className="section-divider w-24 mx-auto" />
           </div>
 
@@ -125,7 +125,7 @@ export default function Academics() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
                   activeTab === tab.id
-                    ? "bg-[#1a1510] text-gold shadow-md"
+                    ? "bg-[#0d1b3e] text-gold shadow-md"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
@@ -141,10 +141,10 @@ export default function Academics() {
             className="grid lg:grid-cols-2 gap-10 items-start"
           >
             <div>
-              <h3 className="text-2xl font-bold text-[#1a1510] mb-4">{content.title}</h3>
+              <h3 className="text-2xl font-bold text-[#0d1b3e] mb-4">{content.title}</h3>
               <p className="text-gray-600 leading-relaxed mb-6">{content.desc}</p>
               <div>
-                <div className="font-semibold text-[#1a1510] mb-3">Key Highlights</div>
+                <div className="font-semibold text-[#0d1b3e] mb-3">Key Highlights</div>
                 <ul className="space-y-2">
                   {content.highlights.map((h) => (
                     <li key={h} className="flex items-start gap-2 text-gray-600 text-sm">
@@ -156,14 +156,14 @@ export default function Academics() {
               </div>
             </div>
             <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-              <div className="font-semibold text-[#1a1510] mb-4 flex items-center gap-2">
+              <div className="font-semibold text-[#0d1b3e] mb-4 flex items-center gap-2">
                 <span className="w-1.5 h-6 rounded bg-gold inline-block" />
                 Subjects Offered
               </div>
               <ul className="space-y-2">
                 {content.subjects.map((s) => (
                   <li key={s} className="flex items-center gap-3 text-gray-700 py-2 border-b border-gray-100 last:border-0 text-sm">
-                    <span className="w-2 h-2 rounded-full bg-[#6b4a10] shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-[#1a3a80] shrink-0" />
                     {s}
                   </li>
                 ))}
@@ -177,8 +177,8 @@ export default function Academics() {
       <section id="senior" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <div className="text-xs font-bold tracking-widest uppercase text-[#6b4a10] mb-3">Classes XI–XII</div>
-            <h2 className="text-4xl font-bold text-[#1a1510] mb-4">Senior Secondary Streams</h2>
+            <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">Classes XI–XII</div>
+            <h2 className="text-4xl font-bold text-[#0d1b3e] mb-4">Senior Secondary Streams</h2>
             <div className="section-divider w-24 mx-auto" />
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -214,7 +214,7 @@ export default function Academics() {
       </section>
 
       {/* Co-Curricular */}
-      <section className="py-20 bg-[#1a1510]">
+      <section className="py-20 bg-[#0d1b3e]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <div className="text-xs font-bold tracking-widest uppercase text-gold/70 mb-3">Beyond Classrooms</div>
