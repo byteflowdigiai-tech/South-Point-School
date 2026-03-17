@@ -121,14 +121,14 @@ export default function Home() {
       {/* Hero Section */}
       <section
         className="relative min-h-[88vh] flex items-center overflow-hidden"
-        style={{ background: current.bg, transition: "background 1s ease" }}
+        style={{
+          backgroundImage: "url('/hero-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        {/* Decorative pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `repeating-linear-gradient(45deg, #B8901A 0px, #B8901A 1px, transparent 1px, transparent 30px)`,
-          }} />
-        </div>
+        {/* Dark overlay — heavy on left for text, lighter on right for logo */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(6,13,26,0.92) 0%, rgba(6,13,26,0.88) 45%, rgba(13,27,62,0.65) 100%)" }} />
 
         {/* Gold accent line */}
         <div className="absolute left-0 top-0 bottom-0 w-1.5 gold-gradient" />
