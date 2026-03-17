@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, Award, BookOpen, Users, Calendar, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -107,7 +107,7 @@ export default function Home() {
   const [slide, setSlide] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => setSlide((s) => (s + 1) % heroSlides.length), 5000);
+    const interval = setInterval(() => setSlide((s) => (s + 1) % heroSlides.length), 8000);
     return () => clearInterval(interval);
   }, []);
 
@@ -136,11 +136,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-20 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
+            <AnimatePresence mode="wait">
             <motion.div
               key={slide}
-              initial={{ opacity: 0, x: -40 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
+              exit={{ opacity: 0.35, x: 10 }}
+              transition={{ duration: 1.1, ease: "easeInOut" }}
               className="text-white"
             >
               <div
@@ -170,13 +172,16 @@ export default function Home() {
                 </Link>
               </div>
             </motion.div>
+            </AnimatePresence>
 
             {/* Logo / Visual */}
+            <AnimatePresence mode="wait">
             <motion.div
               key={`logo-${slide}`}
-              initial={{ opacity: 0, scale: 0.85 }}
+              initial={{ opacity: 0.4, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
+              exit={{ opacity: 0.4, scale: 0.95 }}
+              transition={{ duration: 1.1, ease: "easeInOut" }}
               className="hidden lg:flex justify-center items-center"
             >
               <div className="relative">
@@ -188,6 +193,7 @@ export default function Home() {
                 />
               </div>
             </motion.div>
+            </AnimatePresence>
           </div>
         </div>
 
