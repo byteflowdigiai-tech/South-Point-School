@@ -1,7 +1,7 @@
 {
-  "buildCommand": "pnpm -C artifacts/south-point-school run build",
+  "installCommand": "pnpm --dir artifacts/south-point-school install --ignore-workspace",
+  "buildCommand": "pnpm --dir artifacts/south-point-school run build",
   "outputDirectory": "artifacts/south-point-school/dist/public",
-  "installCommand": "pnpm install",
   "framework": null,
   "rewrites": [
     {
