@@ -29,7 +29,6 @@ minimumReleaseAge: 1440
 
 packages:
   - artifacts/*
-  - '!artifacts/api-server'
   - lib/*
   - lib/integrations/*
   - scripts
