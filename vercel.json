@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npx pnpm -C artifacts/south-point-school run build",
+  "outputDirectory": "artifacts/south-point-school/dist/public",
+  "installCommand": "npx pnpm install --filter @workspace/south-point-school...",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
