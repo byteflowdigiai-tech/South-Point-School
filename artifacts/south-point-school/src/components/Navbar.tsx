@@ -5,26 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  {
-    label: "About Us",
-    href: "/about",
-    dropdown: [
-      { label: "History & Legacy", href: "/about#history" },
-      { label: "Vision & Mission", href: "/about#mission" },
-      { label: "Principal's Message", href: "/about#principal" },
-      { label: "Faculty", href: "/about#faculty" },
-    ],
-  },
-  {
-    label: "Academics",
-    href: "/academics",
-    dropdown: [
-      { label: "Primary School", href: "/academics#primary" },
-      { label: "Middle School", href: "/academics#middle" },
-      { label: "Senior Secondary", href: "/academics#senior" },
-      { label: "Curriculum", href: "/academics#curriculum" },
-    ],
-  },
+  { label: "About Us", href: "/about" },
+  { label: "Academics", href: "/academics" },
   { label: "Admissions", href: "/admissions" },
   { label: "News & Events", href: "/news" },
   { label: "Contact", href: "/contact" },
@@ -33,7 +15,6 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [location] = useLocation();
 
   useEffect(() => {
@@ -44,7 +25,6 @@ export default function Navbar() {
 
   useEffect(() => {
     setIsOpen(false);
-    setActiveDropdown(null);
   }, [location]);
 
   return (
@@ -56,13 +36,13 @@ export default function Navbar() {
             Pursuit of Excellence — Est. 1960, Guwahati
           </span>
           <div className="flex items-center gap-6">
-            <a href="tel:+913612xxxxxx" className="flex items-center gap-1.5 hover:text-gold transition-colors">
+            <a href="tel:+919706012121" className="flex items-center gap-1.5 hover:text-gold transition-colors">
               <Phone size={12} />
-              <span>+91 361 2XXXXXX</span>
+              <span>+91 97060-12121</span>
             </a>
-            <a href="mailto:info@southpointschool.edu.in" className="flex items-center gap-1.5 hover:text-gold transition-colors">
+            <a href="mailto:helpdesk@spsghy.co.in" className="flex items-center gap-1.5 hover:text-gold transition-colors">
               <Mail size={12} />
-              <span>info@southpointschool.edu.in</span>
+              <span>helpdesk@spsghy.co.in</span>
             </a>
           </div>
         </div>
@@ -81,7 +61,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
               <img
-                src="/logo.png"
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="South Point School Logo"
                 className="h-12 w-12 object-contain drop-shadow-lg group-hover:scale-105 transition-transform"
               />
@@ -101,8 +81,6 @@ export default function Navbar() {
                 <div
                   key={link.label}
                   className="relative"
-                  onMouseEnter={() => link.dropdown && setActiveDropdown(link.label)}
-                  onMouseLeave={() => setActiveDropdown(null)}
                 >
                   <Link
                     href={link.href}
@@ -113,26 +91,7 @@ export default function Navbar() {
                     }`}
                   >
                     {link.label}
-                    {link.dropdown && <ChevronDown size={14} className="opacity-60" />}
                   </Link>
-                  {link.dropdown && activeDropdown === link.label && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 8 }}
-                      className="absolute top-full left-0 w-52 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden"
-                    >
-                      {link.dropdown.map((item) => (
-                        <Link
-                          key={item.label}
-                          href={item.href}
-                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-800 transition-colors border-b border-gray-50 last:border-0"
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
                 </div>
               ))}
               <Link
@@ -171,19 +130,6 @@ export default function Navbar() {
                     >
                       {link.label}
                     </Link>
-                    {link.dropdown && (
-                      <div className="ml-4 border-l border-white/10 pl-3 mb-1">
-                        {link.dropdown.map((item) => (
-                          <Link
-                            key={item.label}
-                            href={item.href}
-                            className="block py-1.5 text-gray-400 hover:text-gold text-xs"
-                          >
-                            {item.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
                   </div>
                 ))}
                 <Link

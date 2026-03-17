@@ -11,25 +11,31 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-5">
-              <img src="/logo.png" alt="Logo" className="h-14 w-14 object-contain" />
+            <Link href="/" className="flex items-center gap-3 mb-5 group">
+              <img src="/logo.png" alt="Logo" className="h-14 w-14 object-contain group-hover:scale-105 transition-transform" />
               <div>
                 <div className="text-gold font-bold text-lg">South Point School</div>
                 <div className="text-gray-500 text-xs tracking-wider">GUWAHATI · EST. 1960</div>
               </div>
-            </div>
+            </Link>
             <p className="text-sm text-gray-400 leading-relaxed mb-5">
               Nurturing young minds for over six decades. A legacy of academic excellence, 
               character building, and holistic development in the heart of Guwahati.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Twitter, Youtube, Instagram].map((Icon, i) => (
+              {[
+                { icon: Facebook, href: "https://www.facebook.com/southpointguwahati/" },
+                { icon: Instagram, href: "https://www.instagram.com/southpointguwahati/" },
+                { icon: Youtube, href: "https://www.youtube.com/@spsghy" },
+              ].map((social, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-gray-400 hover:text-gold hover:border-gold transition-colors"
                 >
-                  <Icon size={16} />
+                  <social.icon size={16} />
                 </a>
               ))}
             </div>
@@ -69,19 +75,22 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5">
               {[
-                "Primary School (I–V)",
-                "Middle School (VI–VIII)",
-                "Secondary (IX–X)",
-                "Senior Secondary (XI–XII)",
-                "Science Stream",
-                "Commerce Stream",
-                "Arts Stream",
+                { label: "Primary School (I–V)", href: "/academics#primary" },
+                { label: "Middle School (VI–VIII)", href: "/academics#middle" },
+                { label: "Secondary (IX–X)", href: "/academics#secondary" },
+                { label: "Senior Secondary (XI–XII)", href: "/academics#senior" },
+                { label: "Science Stream", href: "/academics#senior" },
+                { label: "Commerce Stream", href: "/academics#senior" },
+                { label: "Arts Stream", href: "/academics#senior" },
               ].map((item) => (
-                <li key={item}>
-                  <span className="text-sm text-gray-400 flex items-center gap-2">
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-gray-400 hover:text-gold transition-colors flex items-center gap-2"
+                  >
                     <span className="w-1 h-1 rounded-full bg-gold opacity-60" />
-                    {item}
-                  </span>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -95,26 +104,26 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-sm text-gray-400">
                 <MapPin size={16} className="text-gold mt-0.5 shrink-0" />
-                <span>South Point School, Guwahati, Assam – 781001, India</span>
+                <span>21 Barsapara Road, Near Battalion Gate, Guwahati – 781018, Assam, India</span>
               </li>
               <li>
-                <a href="tel:+913612xxxxxx" className="flex gap-3 text-sm text-gray-400 hover:text-gold transition-colors">
+                <a href="tel:+919706012121" className="flex gap-3 text-sm text-gray-400 hover:text-gold transition-colors">
                   <Phone size={16} className="text-gold shrink-0" />
-                  <span>+91 361 2XXXXXX</span>
+                  <span>+91 97060-12121</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:info@southpointschool.edu.in" className="flex gap-3 text-sm text-gray-400 hover:text-gold transition-colors">
+                <a href="mailto:helpdesk@spsghy.co.in" className="flex gap-3 text-sm text-gray-400 hover:text-gold transition-colors">
                   <Mail size={16} className="text-gold shrink-0" />
-                  <span>info@southpointschool.edu.in</span>
+                  <span>helpdesk@spsghy.co.in</span>
                 </a>
               </li>
             </ul>
 
             <div className="mt-6 p-3 rounded-lg border border-white/10 bg-white/5">
               <div className="text-xs text-gray-400 mb-1">Office Hours</div>
-              <div className="text-sm text-gray-200">Mon – Fri: 8:00 AM – 4:00 PM</div>
-              <div className="text-sm text-gray-200">Sat: 8:00 AM – 1:00 PM</div>
+              <div className="text-sm text-gray-200">Mon – Sat: 9:00 AM – 3:00 PM</div>
+              <div className="text-xs text-gray-500 mt-1">Closed on Sundays & 1st/3rd Sat</div>
             </div>
           </div>
         </div>
@@ -125,9 +134,8 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-gray-500">
           <span>© {new Date().getFullYear()} South Point School, Guwahati. All rights reserved.</span>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-gold transition-colors">Terms of Use</a>
-            <a href="#" className="hover:text-gold transition-colors">Sitemap</a>
+            <Link href="/privacy-policy" className="hover:text-gold transition-colors">Privacy Policy</Link>
+            <Link href="/terms-conditions" className="hover:text-gold transition-colors">Terms of Use</Link>
           </div>
         </div>
       </div>

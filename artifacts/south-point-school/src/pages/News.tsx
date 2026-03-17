@@ -94,7 +94,7 @@ export default function News() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 blue-glow-bg">
         <div className="max-w-7xl mx-auto px-4">
           {/* Featured Article */}
           {featured && filter === "All" && (

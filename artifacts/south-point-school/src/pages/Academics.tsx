@@ -109,7 +109,7 @@ export default function Academics() {
       </section>
 
       {/* Academic Levels */}
-      <section id="primary" className="py-20 bg-white">
+      <section id="primary" className="py-20 blue-glow-bg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">Curriculum</div>
@@ -136,8 +136,9 @@ export default function Academics() {
 
           <motion.div
             key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="grid lg:grid-cols-2 gap-10 items-start"
           >
             <div>
@@ -174,7 +175,7 @@ export default function Academics() {
       </section>
 
       {/* Senior Secondary Streams */}
-      <section id="senior" className="py-20 bg-gray-50">
+      <section id="senior" className="py-20 blue-glow-bg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">Classes XI–XII</div>
@@ -185,10 +186,10 @@ export default function Academics() {
             {streams.map((stream, i) => (
               <motion.div
                 key={stream.name}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
                 className={`rounded-2xl border-2 ${stream.color} p-6 card-hover`}
               >
                 <div className="text-4xl mb-4">{stream.icon}</div>
@@ -225,10 +226,10 @@ export default function Academics() {
             {activities.map((a, i) => (
               <motion.div
                 key={a.name}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.04 }}
+                transition={{ duration: 0.4, delay: i * 0.03, ease: "easeOut" }}
                 className="bg-white/5 border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 hover:border-gold/30 transition cursor-pointer"
               >
                 <div className="text-3xl mb-2">{a.icon}</div>

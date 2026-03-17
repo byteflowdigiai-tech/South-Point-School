@@ -1,0 +1,94 @@
+﻿node.exe : [33mYou are 
+using Node.js 20.17.0. Vite 
+requires Node.js version 
+20.19+ or 22.12+. Please 
+upgrade your Node.js 
+version.[39m
+At D:\South-Point-Design\Sout
+h-Point-Design\artifacts\sout
+h-point-school\node_modules\.
+bin\vite.ps1:36 char:5
++     & "node$exe"  "$basedir
+/../vite/bin/vite.js" $args
++     ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: ([33mYo  
+  u are us...s version.[3   
+ 9m:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+[31mfailed to load config 
+from D:\South-Point-Design\So
+uth-Point-Design\artifacts\so
+uth-point-school\vite.config.
+ts[39m
+[31merror during build:
+Error: PORT environment 
+variable is required but was 
+not provided.
+    at file:///D:/South-Point
+-Design/South-Point-Design/ar
+tifacts/south-point-school/no
+de_modules/.vite-temp/vite.co
+nfig.ts.timestamp-17737415641
+12-759b7677576d.mjs:10:9
+    at ModuleJob.run (node:in
+ternal/modules/esm/module_job
+:234:25)
+    at async 
+ModuleLoader.import (node:int
+ernal/modules/esm/loader:473:
+24)
+    at async 
+loadConfigFromBundledFile (fi
+le:///D:/South-Point-Design/S
+outh-Point-Design/node_module
+s/.pnpm/vite@7.3.1_@types+nod
+e@25.3_847d3f1dfd8a5a4dca3b40
+dafc2c9d32/node_modules/vite/
+dist/node/chunks/config.js:35
+909:12)
+    at async 
+bundleAndLoadConfigFile (file
+:///D:/South-Point-Design/Sou
+th-Point-Design/node_modules/
+.pnpm/vite@7.3.1_@types+node@
+25.3_847d3f1dfd8a5a4dca3b40da
+fc2c9d32/node_modules/vite/di
+st/node/chunks/config.js:3579
+7:17)
+    at async 
+loadConfigFromFile (file:///D
+:/South-Point-Design/South-Po
+int-Design/node_modules/.pnpm
+/vite@7.3.1_@types+node@25.3_
+847d3f1dfd8a5a4dca3b40dafc2c9
+d32/node_modules/vite/dist/no
+de/chunks/config.js:35764:42)
+    at async resolveConfig (f
+ile:///D:/South-Point-Design/
+South-Point-Design/node_modul
+es/.pnpm/vite@7.3.1_@types+no
+de@25.3_847d3f1dfd8a5a4dca3b4
+0dafc2c9d32/node_modules/vite
+/dist/node/chunks/config.js:3
+5413:22)
+    at async createBuilder (f
+ile:///D:/South-Point-Design/
+South-Point-Design/node_modul
+es/.pnpm/vite@7.3.1_@types+no
+de@25.3_847d3f1dfd8a5a4dca3b4
+0dafc2c9d32/node_modules/vite
+/dist/node/chunks/config.js:3
+3875:19)
+    at async CAC.<anonymous> 
+(file:///D:/South-Point-Desig
+n/South-Point-Design/node_mod
+ules/.pnpm/vite@7.3.1_@types+
+node@25.3_847d3f1dfd8a5a4dca3
+b40dafc2c9d32/node_modules/vi
+te/dist/node/cli.js:629:10)[
+39m

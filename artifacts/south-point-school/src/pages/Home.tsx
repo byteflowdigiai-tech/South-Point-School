@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, Award, BookOpen, Users, Calendar, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -56,8 +56,8 @@ const newsItems = [
   {
     date: "Nov 20, 2024",
     category: "Admissions",
-    title: "Admissions Open for 2025-26 Session",
-    excerpt: "Registration forms for the new academic session are now available online and at the school office.",
+    title: "Admissions Open for 2026-27 Session",
+    excerpt: "Registration forms for the new academic session (Nursery to Class 9 & Class 11) are now available online.",
   },
 ];
 
@@ -100,21 +100,16 @@ const events = [
   { date: "20", month: "DEC", title: "Annual Cultural Festival — Utsav 2024", location: "School Auditorium" },
   { date: "25", month: "JAN", title: "Republic Day Celebration & March Past", location: "School Ground" },
   { date: "15", month: "FEB", title: "Inter-School Science Olympiad 2025", location: "Science Block" },
-  { date: "31", month: "MAR", title: "Last Date: Admission 2025-26", location: "School Office" },
+  { date: "31", month: "MAR", title: "Last Date: Admission 2026-27", location: "School Office" },
 ];
 
 export default function Home() {
   const [slide, setSlide] = useState(0);
-  const [visible, setVisible] = useState(true);
   const slideRef = useRef(0);
 
   const changeSlide = (next: number) => {
-    setVisible(false);
-    setTimeout(() => {
-      setSlide(next);
-      slideRef.current = next;
-      setVisible(true);
-    }, 500);
+    setSlide(next);
+    slideRef.current = next;
   };
 
   useEffect(() => {
@@ -132,44 +127,48 @@ export default function Home() {
       <NewsTicker />
 
       {/* Hero Section */}
-      <section
-        className="relative min-h-[88vh] flex items-center overflow-hidden"
-        style={{
-          backgroundImage: "url('/hero-bg.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {/* Dark overlay — very strong left for text legibility, moderate right for logo */}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(6,13,26,0.97) 0%, rgba(6,13,26,0.94) 40%, rgba(13,27,62,0.80) 100%)" }} />
+      <section className="relative min-h-[88vh] flex items-center overflow-hidden">
+        {/* Background Image with Zoom Effect */}
+        <motion.div
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url('${import.meta.env.BASE_URL}hero-bg.png')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        {/* Dark overlay — significantly lightened to make background image clearly visible */}
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
 
         {/* Gold accent line */}
         <div className="absolute left-0 top-0 bottom-0 w-1.5 gold-gradient" />
 
-        <div className="max-w-7xl mx-auto px-4 py-20 w-full">
+        <div className="max-w-7xl mx-auto px-4 py-20 w-full text-center lg:text-left relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
-            <div
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0)" : "translateY(-8px)",
-                transition: "opacity 0.5s ease, transform 0.5s ease",
-              }}
-              className="text-white"
-            >
+            <div className="text-white z-10">
               <div
-                className="inline-block text-xs font-bold tracking-[0.25em] uppercase px-4 py-1.5 rounded-full mb-6"
-                style={{ background: `${current.accent}22`, border: `1px solid ${current.accent}55`, color: current.accent }}
+                className="inline-block text-xs font-bold tracking-[0.25em] uppercase px-4 py-1.5 rounded-full mb-6 backdrop-blur-md"
+                style={{ background: `${current.accent}33`, border: `1px solid ${current.accent}77`, color: current.accent }}
               >
                 {current.subtitle}
               </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 drop-shadow-2xl">
                 <span style={{ color: current.accent }}>{current.title}</span>
               </h1>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-xl">
+              <p className="text-gray-100 text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 drop-shadow-md font-medium">
                 {current.description}
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                 <Link
                   href="/admissions"
                   className="flex items-center gap-2 px-7 py-3.5 rounded font-semibold text-[#0d1b3e] gold-gradient hover:opacity-90 transition shadow-lg shadow-gold/20"
@@ -186,20 +185,13 @@ export default function Home() {
             </div>
 
             {/* Logo / Visual */}
-            <div
-              style={{
-                opacity: visible ? 1 : 0.45,
-                transform: visible ? "scale(1)" : "scale(0.97)",
-                transition: "opacity 0.5s ease, transform 0.5s ease",
-              }}
-              className="hidden lg:flex justify-center items-center"
-            >
+            <div className="hidden md:flex justify-center items-center z-10">
               <div className="relative">
                 <div className="absolute inset-0 rounded-full blur-3xl opacity-20" style={{ background: current.accent }} />
                 <img
-                  src="/logo.png"
+                  src={`${import.meta.env.BASE_URL}logo.png`}
                   alt="South Point School"
-                  className="relative w-[480px] h-[480px] object-contain drop-shadow-2xl"
+                  className="relative w-[320px] h-[320px] lg:w-[480px] lg:h-[480px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] drop-shadow-[0_10px_10px_rgba(0,0,0,0.3)]"
                 />
               </div>
             </div>
@@ -222,7 +214,7 @@ export default function Home() {
       <StatCounter />
 
       {/* About Snippet */}
-      <section className="py-20 bg-white">
+      <section className="py-20 blue-glow-bg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -266,14 +258,14 @@ export default function Home() {
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { bg: "bg-[#0d1b3e]", text: "text-gold", title: "Vision", desc: "To be the leading institution developing globally competent, ethically grounded citizens." },
-                { bg: "bg-[#1a3a80]", text: "text-gold-light", title: "Mission", desc: "Providing quality education that fosters intellectual curiosity and moral integrity." },
-                { bg: "bg-[#f0f4ff]", text: "text-[#0d1b3e]", title: "Values", desc: "Integrity, Excellence, Empathy, Innovation — the pillars of our school culture." },
-                { bg: "bg-[#1a3060]", text: "text-gold-light", title: "Excellence", desc: "Consistently delivering outstanding academic and extracurricular achievements." },
+                { bg: "bg-[#0d1b3e]", text: "text-gold", title: "Vision", desc: "To be the leading institution developing globally competent, ethically grounded citizens.", dark: true },
+                { bg: "bg-[#1a3a80]", text: "text-gold-light", title: "Mission", desc: "Providing quality education that fosters intellectual curiosity and moral integrity.", dark: true },
+                { bg: "bg-[#f0f4ff]", text: "text-[#0d1b3e]", title: "Values", desc: "Integrity, Excellence, Empathy, Innovation — the pillars of our school culture.", dark: false },
+                { bg: "bg-[#1a3060]", text: "text-gold-light", title: "Excellence", desc: "Consistently delivering outstanding academic and extracurricular achievements.", dark: true },
               ].map((card) => (
                 <div key={card.title} className={`${card.bg} rounded-xl p-6 card-hover`}>
                   <div className={`text-xl font-bold ${card.text} mb-3`}>{card.title}</div>
-                  <p className="text-white/80 text-sm leading-relaxed">{card.desc}</p>
+                  <p className={`${card.dark ? "text-white/80" : "text-gray-600"} text-sm leading-relaxed`}>{card.desc}</p>
                 </div>
               ))}
             </div>
@@ -282,7 +274,7 @@ export default function Home() {
       </section>
 
       {/* Academic Programs */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 blue-glow-bg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">Programmes Offered</div>
@@ -296,10 +288,10 @@ export default function Home() {
             {programs.map((prog, i) => (
               <motion.div
                 key={prog.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, delay: i * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
                 className={`bg-gradient-to-br ${prog.color} border ${prog.border} rounded-2xl p-6 card-hover cursor-pointer`}
               >
                 <div className="text-4xl mb-4">{prog.icon}</div>
@@ -316,7 +308,7 @@ export default function Home() {
       </section>
 
       {/* News & Events Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 blue-glow-bg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-10">
             {/* News */}
@@ -334,10 +326,10 @@ export default function Home() {
                 {newsItems.map((item, i) => (
                   <motion.div
                     key={i}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.08 }}
+                    transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
                     className="flex gap-4 p-4 rounded-xl border border-gray-100 hover:border-gold/40 hover:shadow-md transition cursor-pointer group"
                   >
                     <div className="shrink-0 w-16 h-16 rounded-xl bg-[#0d1b3e] flex flex-col items-center justify-center text-gold">
@@ -370,10 +362,10 @@ export default function Home() {
                 {events.map((event, i) => (
                   <motion.div
                     key={i}
-                    initial={{ opacity: 0, x: 20 }}
+                    initial={{ opacity: 0, x: 15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
+                    transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
                     className="flex gap-4 items-start p-4 rounded-xl bg-gray-50 hover:bg-[#0d1b3e] transition group cursor-pointer border border-gray-100"
                   >
                     <div className="shrink-0 w-14 text-center">
@@ -426,10 +418,10 @@ export default function Home() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
+                transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
                 className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-gold/30 transition group"
               >
                 <div className="text-3xl mb-4">{item.icon}</div>
@@ -472,10 +464,10 @@ export default function Home() {
             ].map((t, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
                 className="bg-white rounded-2xl p-6 shadow-sm border border-blue-100 card-hover"
               >
                 <div className="text-3xl text-gold mb-4">"</div>

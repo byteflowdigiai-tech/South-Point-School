@@ -35,10 +35,15 @@ export default function About() {
       </section>
 
       {/* History */}
-      <section id="history" className="py-20 bg-white">
+      <section id="history" className="py-20 blue-glow-bg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <motion.div 
+              initial={{ opacity: 0, x: -15 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">Our Legacy</div>
               <h2 className="text-4xl font-bold text-[#0d1b3e] mb-6">History & Heritage</h2>
               <div className="section-divider w-24 mb-6" />
@@ -63,10 +68,10 @@ export default function About() {
               ].map((item, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
+                  transition={{ duration: 0.5, delay: i * 0.05, ease: "easeOut" }}
                   className="p-4 rounded-xl bg-gray-50 border border-gray-100"
                 >
                   <div className="text-gold font-bold text-xl mb-1">{item.year}</div>
@@ -79,7 +84,7 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section id="mission" className="py-20 bg-gray-50">
+      <section id="mission" className="py-20 blue-glow-bg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">Our Purpose</div>
@@ -109,12 +114,13 @@ export default function About() {
                 textColor: "text-gold",
                 content: "Integrity, Excellence, Respect, Innovation, Empathy — these core values guide every decision, interaction, and achievement at South Point School.",
               },
-            ].map((card) => (
+            ].map((card, i) => (
               <motion.div
                 key={card.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
                 className={`${card.color} rounded-2xl p-8 text-white card-hover`}
               >
                 <div className="text-5xl mb-4">{card.icon}</div>
@@ -127,7 +133,7 @@ export default function About() {
       </section>
 
       {/* Principal's Message */}
-      <section id="principal" className="py-20 bg-white">
+      <section id="principal" className="py-20 blue-glow-bg">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">From the Desk</div>
@@ -139,23 +145,22 @@ export default function About() {
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="shrink-0">
                 <div className="w-28 h-28 rounded-full bg-[#0d1b3e] flex items-center justify-center text-gold text-4xl font-bold shadow-lg">
-                  R
+                  K
                 </div>
                 <div className="text-center mt-3">
-                  <div className="font-bold text-[#0d1b3e]">Dr. Ramesh Baruah</div>
+                  <div className="font-bold text-[#0d1b3e]">Mr. Krishnanjan Chanda</div>
                   <div className="text-gray-500 text-sm">Principal</div>
-                  <div className="text-gray-400 text-xs">M.Ed., Ph.D.</div>
                 </div>
               </div>
               <div>
                 <p className="text-gray-700 leading-relaxed text-lg italic mb-4">
-                  "Welcome to South Point School — a place where dreams are nurtured and potential is realized. For over six decades, we have maintained an unwavering commitment to providing the highest quality of education to the children of Guwahati and beyond."
+                  "At South Point, we pursue excellence by blending traditional values with modern innovation. Our core philosophy is to foster honesty, cooperation, and discipline in every child."
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Our approach combines time-tested pedagogical principles with modern teaching methodologies. We believe that true education goes far beyond textbooks — it encompasses the development of character, compassion, and the courage to face life's challenges with integrity.
+                  We are committed to providing a holistic educational experience that allows students to excel across literary, sports, art, and music domains. Every child finds a sense of belonging here and an opportunity to develop their unique talents for a dynamic world.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  I invite you to be a part of our distinguished community, where every student is valued, every achievement celebrated, and every aspiration supported. Together, we build the leaders of tomorrow.
+                  I invite you to explore our vibrant community where we maintain a strong foundation in core values while preparing for future challenges. Together, we shape the leaders of tomorrow.
                 </p>
               </div>
             </div>
@@ -164,7 +169,7 @@ export default function About() {
       </section>
 
       {/* Faculty */}
-      <section id="faculty" className="py-20 bg-gray-50">
+      <section id="faculty" className="py-20 blue-glow-bg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">Our Team</div>
@@ -175,10 +180,10 @@ export default function About() {
             {faculty.map((f, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
+                transition={{ duration: 0.5, delay: i * 0.05, ease: "easeOut" }}
                 className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm card-hover flex items-center gap-4"
               >
                 <div className="w-16 h-16 rounded-full bg-[#0d1b3e] flex items-center justify-center text-gold text-2xl font-bold shrink-0">

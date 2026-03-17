@@ -37,7 +37,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 blue-glow-bg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
@@ -50,22 +50,22 @@ export default function Contact() {
                   {
                     icon: <MapPin className="text-gold" size={20} />,
                     title: "Address",
-                    lines: ["South Point School", "Guwahati, Assam – 781001", "India"],
+                    lines: ["21 Barsapara Road", "Near Battalion Gate, Guwahati – 781018", "Assam, India"],
                   },
                   {
                     icon: <Phone className="text-gold" size={20} />,
                     title: "Phone",
-                    lines: ["+91 361 2XXXXXX", "+91 98642 XXXXX (WhatsApp)"],
+                    lines: ["+91 97060-12121", "helpdesk@spsghy.co.in"],
                   },
                   {
                     icon: <Mail className="text-gold" size={20} />,
                     title: "Email",
-                    lines: ["info@southpointschool.edu.in", "admissions@southpointschool.edu.in"],
+                    lines: ["helpdesk@spsghy.co.in", "spsghy@rediffmail.com"],
                   },
                   {
                     icon: <Clock className="text-gold" size={20} />,
                     title: "Office Hours",
-                    lines: ["Monday – Friday: 8:00 AM – 4:00 PM", "Saturday: 8:00 AM – 1:00 PM", "Sunday: Closed"],
+                    lines: ["Mon – Sat: 9:00 AM – 3:00 PM", "Closed on Sundays", "1st & 3rd Saturdays: Closed"],
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
@@ -87,10 +87,8 @@ export default function Contact() {
                 <div className="font-semibold text-[#0d1b3e] mb-4">Quick Contacts</div>
                 <div className="space-y-3">
                   {[
-                    { dept: "Admissions", email: "admissions@southpointschool.edu.in" },
-                    { dept: "Academics", email: "academics@southpointschool.edu.in" },
-                    { dept: "Transport", email: "transport@southpointschool.edu.in" },
-                    { dept: "Alumni", email: "alumni@southpointschool.edu.in" },
+                    { dept: "Helpdesk", email: "helpdesk@spsghy.co.in" },
+                    { dept: "Office", email: "spsghy@rediffmail.com" },
                   ].map((d) => (
                     <div key={d.dept} className="p-3 rounded-lg bg-gray-50 border border-gray-100">
                       <div className="text-xs font-bold text-[#1a3a80] uppercase tracking-wider">{d.dept}</div>
@@ -172,7 +170,7 @@ export default function Contact() {
                   <div className="font-medium text-gray-600">South Point School, Guwahati</div>
                   <div className="text-sm">Assam, India</div>
                   <a
-                    href="https://maps.google.com"
+                    href="https://www.google.com/maps/search/South+Point+School+Barsapara+Guwahati"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-3 inline-block text-sm font-semibold text-[#0d1b3e] hover:text-gold transition"

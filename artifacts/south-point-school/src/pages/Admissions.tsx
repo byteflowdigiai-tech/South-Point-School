@@ -70,7 +70,7 @@ export default function Admissions() {
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-white">
+      <section className="py-20 blue-glow-bg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <div className="text-xs font-bold tracking-widest uppercase text-[#1a3a80] mb-3">How to Apply</div>
@@ -102,7 +102,7 @@ export default function Admissions() {
       </section>
 
       {/* Documents & Fees */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 blue-glow-bg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Docs */}
