@@ -402,7 +402,7 @@ export default function Home() {
       <section className="py-20 bg-[#0d1b3e]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <div className="text-xs font-bold tracking-widest uppercase text-gold/70 mb-3">Why South Point</div>
+            <div className="text-xs font-bold tracking-widest uppercase text-gold mb-3">Why South Point</div>
             <h2 className="text-4xl font-bold text-white mb-4">The South Point Advantage</h2>
             <div className="section-divider w-24 mx-auto" />
           </div>

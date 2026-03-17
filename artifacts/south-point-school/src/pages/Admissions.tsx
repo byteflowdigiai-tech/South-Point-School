@@ -49,7 +49,7 @@ export default function Admissions() {
 
       {/* Hero */}
       <section className="bg-[#1a3a80] py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{
+        <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `repeating-linear-gradient(45deg, #B8901A 0px, #B8901A 1px, transparent 1px, transparent 30px)`,
         }} />
         <div className="absolute left-0 top-0 bottom-0 w-1.5 gold-gradient" />
@@ -161,7 +161,7 @@ export default function Admissions() {
       <section className="py-20 bg-[#0d1b3e]">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-10">
-            <div className="text-xs font-bold tracking-widest uppercase text-gold/70 mb-3">Get In Touch</div>
+            <div className="text-xs font-bold tracking-widest uppercase text-gold mb-3">Get In Touch</div>
             <h2 className="text-4xl font-bold text-white mb-4">Admission Enquiry</h2>
             <div className="section-divider w-24 mx-auto" />
           </div>

@@ -10,24 +10,24 @@ const streams = [
     icon: "🔬",
     subjects: ["Physics", "Chemistry", "Biology / Mathematics", "English", "Computer Science"],
     career: "Engineering, Medicine, Research, Technology",
-    color: "border-blue-400 bg-blue-50",
-    badge: "bg-blue-600",
+    color: "border-gold/40 bg-[#0d1b3e]/5",
+    badge: "bg-[#0d1b3e]",
   },
   {
     name: "Commerce",
     icon: "📊",
     subjects: ["Accountancy", "Business Studies", "Economics", "English", "Mathematics"],
     career: "CA, MBA, Banking, Finance, Entrepreneurship",
-    color: "border-green-400 bg-green-50",
-    badge: "bg-green-600",
+    color: "border-gold/40 bg-[#0d1b3e]/5",
+    badge: "bg-[#1a3060]",
   },
   {
     name: "Arts",
     icon: "🎨",
     subjects: ["History", "Political Science", "Geography", "Economics", "English"],
     career: "Civil Services, Law, Journalism, Teaching",
-    color: "border-purple-400 bg-purple-50",
-    badge: "bg-purple-600",
+    color: "border-gold/40 bg-[#0d1b3e]/5",
+    badge: "bg-[#1a3a80]",
   },
 ];
 
@@ -92,12 +92,12 @@ export default function Academics() {
 
       {/* Page Hero */}
       <section className="bg-[#0d1b3e] py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{
+        <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `repeating-linear-gradient(45deg, #B8901A 0px, #B8901A 1px, transparent 1px, transparent 30px)`,
         }} />
         <div className="absolute left-0 top-0 bottom-0 w-1.5 gold-gradient" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="text-xs font-bold tracking-widest uppercase text-gold/70 mb-3">Learning & Growth</div>
+          <div className="text-xs font-bold tracking-widest uppercase text-gold mb-3">Learning & Growth</div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             <span className="text-gold">Academic</span> Excellence
           </h1>
@@ -217,7 +217,7 @@ export default function Academics() {
       <section className="py-20 bg-[#0d1b3e]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <div className="text-xs font-bold tracking-widest uppercase text-gold/70 mb-3">Beyond Classrooms</div>
+            <div className="text-xs font-bold tracking-widest uppercase text-gold mb-3">Beyond Classrooms</div>
             <h2 className="text-4xl font-bold text-white mb-4">Co-Curricular Activities</h2>
             <div className="section-divider w-24 mx-auto" />
           </div>

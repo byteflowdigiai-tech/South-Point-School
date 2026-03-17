@@ -20,12 +20,12 @@ export default function About() {
 
       {/* Page Hero */}
       <section className="bg-[#0d1b3e] py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{
+        <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `repeating-linear-gradient(45deg, #B8901A 0px, #B8901A 1px, transparent 1px, transparent 30px)`,
         }} />
         <div className="absolute left-0 top-0 bottom-0 w-1.5 gold-gradient" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="text-xs font-bold tracking-widest uppercase text-gold/70 mb-3">Our Story</div>
+          <div className="text-xs font-bold tracking-widest uppercase text-gold mb-3">Our Story</div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">About <span className="text-gold">South Point School</span></h1>
           <div className="section-divider w-24 mb-6" />
           <p className="text-gray-300 max-w-2xl text-lg">

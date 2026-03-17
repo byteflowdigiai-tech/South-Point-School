@@ -21,12 +21,12 @@ export default function Contact() {
 
       {/* Hero */}
       <section className="bg-[#0d1b3e] py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{
+        <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `repeating-linear-gradient(45deg, #B8901A 0px, #B8901A 1px, transparent 1px, transparent 30px)`,
         }} />
         <div className="absolute left-0 top-0 bottom-0 w-1.5 gold-gradient" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="text-xs font-bold tracking-widest uppercase text-gold/70 mb-3">Reach Us</div>
+          <div className="text-xs font-bold tracking-widest uppercase text-gold mb-3">Reach Us</div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             Get in <span className="text-gold">Touch</span>
           </h1>
@@ -110,11 +110,11 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="bg-green-50 border border-green-200 rounded-2xl p-12 text-center"
+                  className="bg-[#0d1b3e] border border-gold/30 rounded-2xl p-12 text-center"
                 >
                   <div className="text-6xl mb-4">✉️</div>
-                  <h3 className="text-[#0d1b3e] text-2xl font-bold mb-2">Message Sent!</h3>
-                  <p className="text-gray-500">We'll get back to you within 1-2 business days. Thank you for reaching out to South Point School.</p>
+                  <h3 className="text-gold text-2xl font-bold mb-2">Message Sent!</h3>
+                  <p className="text-gray-300">We'll get back to you within 1-2 business days. Thank you for reaching out to South Point School.</p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">

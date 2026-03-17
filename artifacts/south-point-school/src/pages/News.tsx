@@ -59,10 +59,10 @@ const allNews = [
 const categories = ["All", "Achievement", "Sports", "Event", "Admissions"];
 
 const catColors: Record<string, string> = {
-  Achievement: "bg-blue-100 text-blue-800",
-  Sports: "bg-blue-100 text-blue-800",
-  Event: "bg-purple-100 text-purple-800",
-  Admissions: "bg-green-100 text-green-800",
+  Achievement: "bg-[#0d1b3e] text-gold border border-gold/30",
+  Sports: "bg-[#1a3060] text-gold-light border border-gold/20",
+  Event: "bg-[#0d1b3e] text-gold border border-gold/30",
+  Admissions: "bg-[#1a3a80] text-white border border-white/20",
 };
 
 export default function News() {
@@ -78,12 +78,12 @@ export default function News() {
 
       {/* Hero */}
       <section className="bg-[#0d1b3e] py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{
+        <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `repeating-linear-gradient(45deg, #B8901A 0px, #B8901A 1px, transparent 1px, transparent 30px)`,
         }} />
         <div className="absolute left-0 top-0 bottom-0 w-1.5 gold-gradient" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="text-xs font-bold tracking-widest uppercase text-gold/70 mb-3">Stay Updated</div>
+          <div className="text-xs font-bold tracking-widest uppercase text-gold mb-3">Stay Updated</div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             News & <span className="text-gold">Events</span>
           </h1>
@@ -118,11 +118,12 @@ export default function News() {
                   Read Full Story <ArrowRight size={16} />
                 </button>
               </div>
-              <div className="bg-gradient-to-br from-amber-400/20 to-gold/10 flex items-center justify-center min-h-48 md:min-h-auto">
-                <div className="text-center p-8">
-                  <div className="text-8xl mb-4">🏆</div>
-                  <div className="text-[#0d1b3e] font-bold text-lg">Outstanding Achievement</div>
-                  <div className="text-gray-500 text-sm">CBSE Board 2024</div>
+              <div className="bg-[#1a3060] flex items-center justify-center min-h-48 md:min-h-auto relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `repeating-linear-gradient(45deg, #D4AF37 0px, #D4AF37 1px, transparent 1px, transparent 24px)` }} />
+                <div className="text-center p-8 relative z-10">
+                  <div className="text-7xl mb-4 drop-shadow-lg">🏆</div>
+                  <div className="text-gold font-bold text-lg tracking-wide">Outstanding Achievement</div>
+                  <div className="text-gray-300 text-sm mt-1">CBSE Board 2024</div>
                 </div>
               </div>
             </motion.div>
