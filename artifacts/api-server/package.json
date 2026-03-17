@@ -5,16 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "NODE_ENV=development tsx ./src/index.ts",
-    "build": "tsc -b && tsx ./build.ts",
+    "build": "tsx ./build.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@workspace/db": "workspace:*",
-    "@workspace/api-zod": "workspace:*",
-    "drizzle-orm": "catalog:",
     "express": "^5",
     "cookie-parser": "^1.4.7",
-    "cors": "^2"
+    "cors": "^2",
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@types/node": "catalog:",
