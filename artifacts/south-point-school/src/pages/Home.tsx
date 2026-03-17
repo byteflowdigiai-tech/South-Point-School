@@ -127,8 +127,8 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-        {/* Dark overlay — heavy on left for text, lighter on right for logo */}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(6,13,26,0.92) 0%, rgba(6,13,26,0.88) 45%, rgba(13,27,62,0.65) 100%)" }} />
+        {/* Dark overlay — very strong left for text legibility, moderate right for logo */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(6,13,26,0.97) 0%, rgba(6,13,26,0.94) 40%, rgba(13,27,62,0.80) 100%)" }} />
 
         {/* Gold accent line */}
         <div className="absolute left-0 top-0 bottom-0 w-1.5 gold-gradient" />
@@ -252,8 +252,8 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { bg: "bg-[#0d1b3e]", text: "text-gold", title: "Vision", desc: "To be the leading institution developing globally competent, ethically grounded citizens." },
-                { bg: "bg-[#1a3a80]", text: "text-yellow-300", title: "Mission", desc: "Providing quality education that fosters intellectual curiosity and moral integrity." },
-                { bg: "bg-[#f0f4ff]0", text: "text-[#0d1b3e]", title: "Values", desc: "Integrity, Excellence, Empathy, Innovation — the pillars of our school culture." },
+                { bg: "bg-[#1a3a80]", text: "text-gold-light", title: "Mission", desc: "Providing quality education that fosters intellectual curiosity and moral integrity." },
+                { bg: "bg-[#f0f4ff]", text: "text-[#0d1b3e]", title: "Values", desc: "Integrity, Excellence, Empathy, Innovation — the pillars of our school culture." },
                 { bg: "bg-[#1a3060]", text: "text-gold-light", title: "Excellence", desc: "Consistently delivering outstanding academic and extracurricular achievements." },
               ].map((card) => (
                 <div key={card.title} className={`${card.bg} rounded-xl p-6 card-hover`}>
