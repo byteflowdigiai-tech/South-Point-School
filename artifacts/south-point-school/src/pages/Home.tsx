@@ -184,7 +184,7 @@ export default function Home() {
                 <img
                   src="/logo.png"
                   alt="South Point School"
-                  className="relative w-96 h-96 object-contain drop-shadow-2xl"
+                  className="relative w-[480px] h-[480px] object-contain drop-shadow-2xl"
                 />
               </div>
             </motion.div>
